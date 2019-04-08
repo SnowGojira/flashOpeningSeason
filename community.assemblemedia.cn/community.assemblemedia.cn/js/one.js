@@ -10,20 +10,14 @@
 	};
 	
 	var startTipOne = { //综艺
-//				imgUrl:'img/update/boy/1.png',//男
-//				imgUrls:'img/update/boy/1.png', //nv
 				imgcloud:'img/answerbox/dati.png',
 				imgbacks:'img/update/fan_back.png',
-//				backimg_con_man:'img/scene/zongyi/zongyi_con.png',
-//				backimg_con_wo:'img/scene/zongyi/zongyi_woman_con.png',
 		 		titles: '爱看综艺的都是聪明鬼，开始入社测试吧！', 
                 comeOn: '',
                 waits: ''
                 
 	};
-	var startTip1 = { //
-//				imgUrl:'img/update/boy/1.png',
-//				imgUrls:'img/update/boy/1.png',
+	var startTip1 = {
 				imgcloud:'img/answerbox/dati.png',
 				imgbacks:'img/update/tv_back.png',
 		 		titles: '看来你是刷片追剧好手呀，开始入社测试吧！', 
@@ -31,8 +25,6 @@
                 waits: ''
 	};
 	var startTip2 = {
-//				imgUrl:'img/update/boy/1.png',
-//				imgUrls:'img/update/boy/1.png',
 				imgcloud:'img/answerbox/dati.png',
 				imgbacks:'img/update/anim_back.png',
 		 		titles: '确认过眼神，你是漫圈人，开始入社测试吧！', 

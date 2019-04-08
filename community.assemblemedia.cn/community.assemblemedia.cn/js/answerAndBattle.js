@@ -34,7 +34,7 @@ function go( url ){
       }
       removeclass()
        
-  })
+  });
 
   //添加动画效果
   function addclass(){
