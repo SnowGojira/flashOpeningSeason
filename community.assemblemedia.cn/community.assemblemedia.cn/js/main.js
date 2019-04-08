@@ -2,23 +2,79 @@
  * Created by hakuh on 8/31/2018.
  */
 
+"use strict";
+
+var swiper = '';
+var currentProblem = 0; //记录当前是第几个场景;
 
 
-let swiper = '';
-let boyMove = 1;
-let girlMove = 0;
+var animImgsBoy = 0;
+var animImgsGirl = 0;
+var boyMove = 1;
+var girlMove = 0;
 var startAnimation = false;
-let currentProblem = 0; //记录当前是第几个场景;
-
-
 
 $(function() {
+     /*First Page Animation*/
 
-    //首页男孩女孩
-    var animImgsBoy = 0;
-    var animImgsGirl = 0;
+    $(".girlclass").click(function() { //女
+        girlMove = 1;
+        boyMove = 0;
+        $(".sex_people").hide();
+        $(".sex_woman").show();
+        var inputs = document.getElementById("username"); //通过id获取文本框对象
+        let sexs = $(this).html();
+        let userinfo = {
+            uName: inputs.value,
+            //			sex: sexs,
+            sexid: 1
+        }
+        if(infomessage.length != 0) {
+
+            infomessage.shift();
+        }
+
+        infomessage.push(userinfo);
+        console.log(infomessage);
+        if(unames.length != 0) {
+            $(".start_game").show();
+            $(".start_logo").hide();
+
+            console.log(infomessage)
+        } else {
+            $(".start_game").hide();
+            $(".start_logo").show();
+        }
+
+    });
+    $(".boyclass").click(function() { //男
+        $(".sex_people").show();
+        $(".sex_woman").hide();
+        girlMove = 0;
+        boyMove = 1;
+        var inputs = document.getElementById("username"); //通过id获取文本框对象
+        let sexs = $(this).html();
+        let userinfo = {
+            uName: inputs.value,
+            sex: sexs,
+            sexid: 0
+        }
+        if(infomessage.length != 0) {
+
+            infomessage.shift();
+        }
+        infomessage.push(userinfo);
+        /*
+         if(unames.length == 1) {
+         $(".start_game").show();
+         } else {
+         $(".start_game").hide();
+         }
+         */
+    });
 
     var animImages = setInterval(function() {
+
         if (startAnimation === false) return;
         if(boyMove) {
             animImgsBoy++;
@@ -28,6 +84,7 @@ $(function() {
             $(".animImgsBoy").hide();
             $(".animImgsBoy" + animImgsBoy).show();
         }
+
         if(girlMove) {
             animImgsGirl++;
             if(animImgsGirl >= 8) {
@@ -38,6 +95,9 @@ $(function() {
         }
     }, 100);
 });
+
+
+
 
 $(".rankingss").hide();
 var imgNum = 0;
@@ -77,72 +137,11 @@ function preloadImg() {
             $(".top").hide();
             $(".sex").show();
             bcaudio();
-            wxShare();
+
             $("#bgbtn").show();
         }
     });
 
-}
-
-function wxShare(){
-
-    var url="http://communitycdn.assemblemedia.cn/";
-    var imageUrl=url+"img/share.jpg";
-    var sharetitle='奇趣社团招“鲜”季';
-    var sharedesc="招募00后鲜肉，严禁谎报年龄!";
-    var shareLink=url;
-    console.log('调用wxshare');
-    wx.ready(function(){
-        wx.onMenuShareTimeline({
-            title:sharedesc, // 分享标题
-            link: shareLink, // 分享链接
-            imgUrl: imageUrl, // 分享图标
-            success: function () {
-                // 用户确认分享后执行的回调函数
-            },
-            cancel: function () {
-                // 用户取消分享后执行的回调函数
-            }
-        });
-        wx.onMenuShareAppMessage({
-            title: sharetitle, // 分享标题
-            desc: sharedesc, // 分享描述
-            link: shareLink, // 分享链接
-            imgUrl: imageUrl, // 分享图标
-            type: '', // 分享类型,music、video或link，不填默认为link
-            dataUrl: '', // 如果type是music或video，则要提供数据链接，默认为空
-            success: function () {
-                // 用户确认分享后执行的回调函数
-            },
-            cancel: function () {
-                // 用户取消分享后执行的回调函数
-            }
-        });
-        wx.onMenuShareQQ({
-            title: sharetitle, // 分享标题
-            desc: sharedesc, // 分享描述
-            link: shareLink, // 分享链接
-            imgUrl: imageUrl, // 分享图标
-            success: function () {
-                // 用户确认分享后执行的回调函数
-            },
-            cancel: function () {
-                // 用户取消分享后执行的回调函数
-            }
-        });
-        wx.onMenuShareWeibo({
-            title: sharetitle, // 分享标题
-            desc: sharedesc, // 分享描述
-            link: shareLink, // 分享链接
-            imgUrl: imageUrl, // 分享图标
-            success: function () {
-                // 用户确认分享后执行的回调函数
-            },
-            cancel: function () {
-                // 用户取消分享后执行的回调函数
-            }
-        });
-    });
 }
 
 function getallBgimages() {
@@ -190,63 +189,6 @@ console.log(infomessage);
 
 //看一下在哪一步可以显示
 
-
-
-$(".girlclass").click(function() { //女
-    girlMove = 1;
-    boyMove = 0;
-    $(".sex_people").hide();
-    $(".sex_woman").show();
-    var inputs = document.getElementById("username"); //通过id获取文本框对象
-    let sexs = $(this).html();
-    let userinfo = {
-        uName: inputs.value,
-        //			sex: sexs,
-        sexid: 1
-    }
-    if(infomessage.length != 0) {
-
-        infomessage.shift();
-    }
-
-    infomessage.push(userinfo);
-    console.log(infomessage);
-    if(unames.length != 0) {
-        $(".start_game").show();
-        $(".start_logo").hide();
-
-        console.log(infomessage)
-    } else {
-        $(".start_game").hide();
-        $(".start_logo").show();
-    }
-
-});
-$(".boyclass").click(function() { //男
-    $(".sex_people").show();
-    $(".sex_woman").hide();
-    girlMove = 0;
-    boyMove = 1;
-    var inputs = document.getElementById("username"); //通过id获取文本框对象
-    let sexs = $(this).html();
-    let userinfo = {
-        uName: inputs.value,
-        sex: sexs,
-        sexid: 0
-    }
-    if(infomessage.length != 0) {
-
-        infomessage.shift();
-    }
-    infomessage.push(userinfo);
-    /*
-     if(unames.length == 1) {
-     $(".start_game").show();
-     } else {
-     $(".start_game").hide();
-     }
-     */
-});
 
 infomessage = [{
     uName: "",

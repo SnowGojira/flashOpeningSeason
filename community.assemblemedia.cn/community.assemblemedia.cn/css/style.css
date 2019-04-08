@@ -1,26 +1,32 @@
-	@font-face {
-		font-family: hanyi;
-		/*这里是说明调用来的字体名字*/
-		src: url("../font/hanyi.ttf");
-		/*这里是字体文件路径*/
-	}
-	@media only screen and (device-width: 375px) and (device-height:812px) and (-webkit-device-pixel-ratio:3) {
+@font-face {
+	font-family: hanyi;
+	/*这里是说明调用来的字体名字*/
+	src: url("../font/hanyi.ttf");
+	/*这里是字体文件路径*/
+}
+
+
+@media only screen and (device-width: 375px) and (device-height:812px) and (-webkit-device-pixel-ratio:3) {
 		html{
 			font-size: 12px;
 		}
 
-.falseTips {
-    padding-top: 1vw;
+		.falseTips {
+    		padding-top: 1vw;
+		}
+
+		.question-select.bounceInUp2 {
+    		padding-top: 3vw;
+		}
 }
 
-.question-select.bounceInUp2 {
-    padding-top: 3vw;
-}
-	}
-	@media screen and (max-width: 319px) {
+
+@media screen and (max-width: 319px) {
 		html {
-			font-size: 12px; } }
-	@media screen and (min-width: 320px) and (max-width: 359px) {
+			font-size: 12px; }
+        }
+
+@media screen and (min-width: 320px) and (max-width: 359px) {
 		html {
 			font-size: 12px;
 			}
@@ -469,8 +475,14 @@ margin-top: 11vh;
 						background-size:100% 100% ;
 		}
 	}
-	
-	
+
+
+	/*下浮坐标*/
+	.animSlide:nth-child(1){display: block;}
+	.animSlide:nth-child(2){display: none;}
+	.animSlide:nth-child(3){display: none;}
+
+
 	/*红旗*/
 	#anim_1{ width:100%; height:26%; position: absolute; z-index: 7;  background-repeat: no-repeat;}
   .animImg img{width: 100%;height: 100%;}
@@ -643,6 +655,8 @@ margin-top: 11vh;
 		}
 
 	}
+
+
 		/*动漫*/
 	#anim2 {
     right: 0;
@@ -755,6 +769,7 @@ margin-top: 11vh;
 		height: auto;
 	}
 
+
 	.bottom{
 		top: 429vw;
 	}
@@ -768,7 +783,17 @@ margin-top: 11vh;
 		top: 110vh;
 	}
 
+	#logo{
+		position:absolute;
+		z-index:8;
+		width: 60vw;
+		height: auto;
+	}
 
+	.logo{
+		top: 501vw;
+		left: 20vw;
+	}
 
 	#anim {
     width: 98vw;
@@ -1175,6 +1200,18 @@ margin-top: 11vh;
 	height: auto;
 	margin-top: 5vw;
 	}
+
+	.start_logo {
+		/* left: 21vw; */
+		width: 51vw;
+		/* top: 9vw; */
+		height: auto;
+		position:  absolute;
+		bottom: -25vw;
+		margin-left: 25vw;
+	}
+
+
 	.boyclass{
 		margin-top: 3vw;
 		margin-left: 14vw;
@@ -1194,14 +1231,14 @@ margin-top: 11vh;
 		    overflow: hidden;
 	}
 	.sex_people{
-		width: 3vw;
-		height: 3vw;
-		margin-right: 39vw;
+		width: 5vw;
+		height: 4vw;
+		margin-left: 25vw;
 	}
 	.sex_woman {
-		width: 3vw;
-		height: 3vw;
-		margin-left: 39vw;
+		width: 5vw;
+		height: 4vw;
+		margin-left: 68vw;
 		display: none;
 	}
 	
@@ -1337,17 +1374,119 @@ margin-top: 11vh;
    #slide_down{
 	   position: fixed;
 	   z-index: 1000;
-	   width: 11%;
-	   height: auto;
+	   width: 11vw;
+	   height: 12vw;
 	   text-align: center;
 	   bottom: 0;
+	   left: 47vw;
 	  }
+    .slideAnim{width: 100%; height: 100%;text-align: center;}
+	.slideAnim img{width: 100%;height: 100%;}
+	.slideAnim:nth-child(1){display: block;}
+	.slideAnim:nth-child(2){display: none;}
+	.slideAnim:nth-child(3){display: none;}
+
+
+
+	/*综艺*/
+	#anim1 {
+		width: 67vw;
+		height: 55vh;
+		position: absolute;
+		top: 43vh;
+		/* left: 20px; */
+		right: 0;
+		z-index: 6;
+		-webkit-animation: auto-circle1 0.5s step-end infinite;
+		display: none;
+	}
+	@-webkit-keyframes auto-circle1 {
+		0% {
+			background-image: url(../img/zongyi/0.png);
+			background-repeat:no-repeat ;
+			background-size:100% 100% ;
+		}
+		20% {
+			background-image: url(../img/zongyi/1.png);
+			background-repeat:no-repeat ;
+			background-size:100% 100% ;
+		}
+		40% {
+			background-image: url(../img/zongyi/2.png);
+			background-repeat:no-repeat ;
+			background-size:100% 100% ;
+		}
+		60% {
+			background-image: url(../img/zongyi/3.png);
+			background-repeat:no-repeat ;
+			background-size:100% 100% ;
+		}
+		80% {
+			background-image: url(../img/zongyi/4.png);
+			background-repeat:no-repeat ;
+			background-size:100% 100% ;
+		}
+		100% {
+			background-image: url(../img/zongyi/5.png);
+			background-repeat:no-repeat ;
+			background-size:100% 100% ;
+		}
+
+	}
+	/*综艺*/
+	#anim1 {
+		width: 67vw;
+		height: 55vh;
+		position: absolute;
+		top: 43vh;
+		/* left: 20px; */
+		right: 0;
+		z-index: 6;
+		-webkit-animation: auto-circle1 0.5s step-end infinite;
+		display: none;
+	}
+	@-webkit-keyframes auto-circle1 {
+		0% {
+			background-image: url(../img/zongyi/0.png);
+			background-repeat:no-repeat ;
+			background-size:100% 100% ;
+		}
+		20% {
+			background-image: url(../img/zongyi/1.png);
+			background-repeat:no-repeat ;
+			background-size:100% 100% ;
+		}
+		40% {
+			background-image: url(../img/zongyi/2.png);
+			background-repeat:no-repeat ;
+			background-size:100% 100% ;
+		}
+		60% {
+			background-image: url(../img/zongyi/3.png);
+			background-repeat:no-repeat ;
+			background-size:100% 100% ;
+		}
+		80% {
+			background-image: url(../img/zongyi/4.png);
+			background-repeat:no-repeat ;
+			background-size:100% 100% ;
+		}
+		100% {
+			background-image: url(../img/zongyi/5.png);
+			background-repeat:no-repeat ;
+			background-size:100% 100% ;
+		}
+
+	}
+
+
+
 	#paperButton{
 	position: absolute;
 	/* z-index: 10; */
-	bottom: 0;
+	bottom: 1vh;
 	width: 100%;
-	margin-bottom: 4vw;
+	margin-bottom: 2vw;
 	}
 	.worsttext{
 	padding: 0 3rem;
@@ -1732,16 +1871,82 @@ margin-top: 11vh;
 	}*/
 
 
-
-	/*media query for iphone X*/
-	
-	/* iphone X */
-	@media only screen and (min-device-width: 375px) and (max-device-height: 812px) and (-webkit-device-pixel-ratio: 3) {
-
-
-	}
-
 	* {
 		-webkit-tap-highlight-color : rgba(0, 0, 0, 0) ;
 		-webkit-tap-highlight-color : transparent ;
 	}
+
+	/*media query for iphone X*/
+	/*兼容iphone6 Plus,iphone7 Plus,iphone8 Plus*/
+
+	@media (device-height:736px) and (-webkit-min-device-pixel-ratio:2){
+		.start_logo {
+			/* left: 21vw; */
+			width: 48vw;
+			/* top: 9vw; */
+			height: auto;
+			position:  absolute;
+			bottom: -20vw;
+			margin-left: 26.5vw;
+		}
+
+		.start_game {
+			/* left: 21vw; */
+			width: 56vw;
+			/* top: 9vw; */
+			height: auto;
+			margin-top: 5vw;
+		}
+
+		#imgShow {
+			position: absolute;
+			top: 3vh;
+		}
+
+		#paperButton{
+			position: absolute;
+			/* z-index: 10; */
+			bottom: 1vh;
+			width: 100%;
+			margin-bottom: 2vw;
+		}
+
+	}
+
+	/*兼容iphoneX*/
+	@media only screen and (device-width: 375px) and (device-height: 812px) and (-webkit-device-pixel-ratio: 3){
+
+		.start_logo {
+			/* left: 21vw; */
+			width: 49vw;
+			/* top: 9vw; */
+			height: auto;
+			position:  absolute;
+			bottom: -32vw;
+			margin-left: 25.5vw;
+		}
+
+		.start_game {
+			/* left: 21vw; */
+			width: 56vw;
+			/* top: 9vw; */
+			height: auto;
+			margin-top: 15vw;
+		}
+
+		#imgShow {
+			position: absolute;
+			top: 9vh;
+		}
+
+		#paperButton{
+			position: absolute;
+			/* z-index: 10; */
+			bottom: 12vh;
+			width: 100%;
+			margin-bottom: 4vw;
+		}
+	}
+
+
+
