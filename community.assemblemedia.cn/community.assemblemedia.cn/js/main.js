@@ -8,44 +8,48 @@ var swiper = '';
 var currentProblem = 0; //记录当前是第几个场景;
 
 /*preload Images
-* preloadImg is an IIFE
 * */
+var imgNum = 0;
+var images = [];
 
+/* preloadImg is an IIFE */
 (function preloadImg() {
-    var imgNum = 0;
-    var images = [];
-    {
-        let imgs;
-        imgs = document.images;
-        for(let i = 0; i < imgs.length; i++) {
-            images.push(imgs[i].src);
-        }
-    }
-
+    imgLoader();
     $.imgpreload(images, {
-        each: function() {
-            /*this will be called after each image loaded*/
-            let status = $(this).data('loaded') ? 'success' : 'error';
-            if(status === "success") {
-                let v = (parseFloat(++imgNum) / images.length).toFixed(2);
-                $("#percentShow").html(Math.round(v * 100) + "<sup>%</sup>");
-            }
-        },
-        all: function() {
-            /*this will be called after all images loaded*/
-            $("#percentShow ").html("100<sup>%</sup>");
-
-            //$("percentShow").fadeOut(10000);
-
-            /*$(".top").hide();
-            $(".sex").show();
-            bcaudio();
-            $("#bgbtn").show();*/
-        }
+        each: progress,
+        all: handlerComplete
     });
 })();
 
-function bcaudio() { //背景音乐
+/********************preloadImg Reference Func ********************/
+function imgLoader() {
+    let imgs;
+    imgs = document.images;
+    for(let i = 0; i < imgs.length; i++) {
+        images.push(imgs[i].src);
+    }
+}
+function progress() {
+    /*this will be called after each image loaded*/
+    let status = $(this).data('loaded') ? 'success' : 'error';
+    if(status === "success") {
+        let v = (parseFloat(++imgNum) / images.length).toFixed(2);
+        $("#percentShow").html(Math.round(v * 100) + "<sup>%</sup>");
+    }
+}
+function handlerComplete() {
+    /*this will be called after all images loaded*/
+    $("#percentShow ").html("100<sup>%</sup>");
+
+    //$("percentShow").fadeOut(10000);
+
+    /*$(".top").hide();
+    $(".sex").show();
+    bcaudio();
+    $("#bgbtn").show();*/
+}
+
+function bgmPlay() { //背景音乐
     let myaudio = document.getElementById("bc");
     myaudio.play();
     document.addEventListener("WeixinJSBridgeReady", function bgmPlay(){
@@ -60,6 +64,11 @@ function bcaudio() { //背景音乐
 //     bc.play();
 // });
 
+
+
+
+/*PageOne
+* todo 1. display logic  2. animation logic*/
 var animImgsBoy = 0;
 var animImgsGirl = 0;
 var boyMove = 1;
