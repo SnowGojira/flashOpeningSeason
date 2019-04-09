@@ -7,6 +7,58 @@
 var swiper = '';
 var currentProblem = 0; //记录当前是第几个场景;
 
+/*preload Images
+* preloadImg is an IIFE
+* */
+
+(function preloadImg() {
+    var imgNum = 0;
+    var images = [];
+    {
+        let imgs;
+        imgs = document.images;
+        for(let i = 0; i < imgs.length; i++) {
+            images.push(imgs[i].src);
+        }
+    }
+
+    $.imgpreload(images, {
+        each: function() {
+            /*this will be called after each image loaded*/
+            let status = $(this).data('loaded') ? 'success' : 'error';
+            if(status === "success") {
+                let v = (parseFloat(++imgNum) / images.length).toFixed(2);
+                $("#percentShow").html(Math.round(v * 100) + "<sup>%</sup>");
+            }
+        },
+        all: function() {
+            /*this will be called after all images loaded*/
+            $("#percentShow ").html("100<sup>%</sup>");
+
+            //$("percentShow").fadeOut(10000);
+
+            /*$(".top").hide();
+            $(".sex").show();
+            bcaudio();
+            $("#bgbtn").show();*/
+        }
+    });
+})();
+
+function bcaudio() { //背景音乐
+    let myaudio = document.getElementById("bc");
+    myaudio.play();
+    document.addEventListener("WeixinJSBridgeReady", function bgmPlay(){
+        myaudio.play();
+    }, false);
+}
+
+//*为什么这有一步莫名其貌的再次播放？*/
+// $(function() {
+//     //preloadImg();
+//     var m =document.getElementById("bc");
+//     bc.play();
+// });
 
 var animImgsBoy = 0;
 var animImgsGirl = 0;
@@ -100,75 +152,9 @@ $(function() {
 
 
 $(".rankingss").hide();
-var imgNum = 0;
-var images = [];
-$(function() {
-    //preloadImg();
-    var m =document.getElementById("bc");
-    bc.play();
-});
 
 
-function preloadImg() {
-    var imgs = document.images;
-    for(var i = 0; i < imgs.length; i++) {
-        images.push(imgs[i].src);
-    }
-    //get all images in style
-    var cssImages = getallBgimages();
-    for(var j = 0; j < cssImages.length; j++) {
-        images.push(cssImages[j]);
-    }
 
-    $.imgpreload(images, {
-        each: function() {
-            /*this will be called after each image loaded*/
-            var status = $(this).data('loaded') ? 'success' : 'error';
-            if(status == "success") {
-                var v = (parseFloat(++imgNum) / images.length).toFixed(2);
-                $("#percentShow").html(Math.round(v * 100) + "<sup>%</sup>");
-            }
-        },
-        all: function() {
-            /*this will be called after all images loaded*/
-            $("#percentShow ").html("100<sup>%</sup>");
-
-            //          $("percentShow").fadeOut(10000);
-            $(".top").hide();
-            $(".sex").show();
-            bcaudio();
-
-            $("#bgbtn").show();
-        }
-    });
-
-}
-
-function getallBgimages() {
-    var url, B = [],
-        A = document.getElementsByTagName('*');
-    A = B.slice.call(A, 0, A.length);
-    while(A.length) {
-        url = document.deepCss(A.shift(), 'background-image');
-        if(url) url = /url\(['"]?([^")]+)/.exec(url) || [];
-        url = url[1];
-        if(url && B.indexOf(url) == -1) B[B.length] = url;
-    }
-    return B;
-}
-
-document.deepCss = function(who, css) {
-    if(!who || !who.style) return '';
-    var sty = css.replace(/\-([a-z])/g, function(a, b) {
-        return b.toUpperCase();
-    });
-    if(who.currentStyle) {
-        return who.style[sty] || who.currentStyle[sty] || '';
-    }
-    var dv = document.defaultView || window;
-    return who.style[sty] ||
-        dv.getComputedStyle(who, "").getPropertyValue(css) || '';
-}
 
 Array.prototype.indexOf = Array.prototype.indexOf ||
     function(what, index) {
@@ -179,7 +165,7 @@ Array.prototype.indexOf = Array.prototype.indexOf ||
             ++index;
         }
         return -1;
-    }
+    };
 
 
 let infomessage = []; //性别
@@ -481,14 +467,7 @@ $(".one_answer").hide();
 //	question_a
 $("#question_a").hide();
 $("#question_b").hide(); //第二道题
-function bcaudio() { //背景音乐
-    var myaudio = document.getElementById("bc");
-    myaudio.play();
-    document.addEventListener("WeixinJSBridgeReady", function() {
-        myaudio.play();
-        //      document.getElementById('video').play();
-    }, false);
-}
+
 
 function beginAnswer(id) {
     //微信第二步

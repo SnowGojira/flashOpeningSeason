@@ -21,6 +21,17 @@
 
 	</head>
 	<body>
+    <div class="top">
+        <div class="top-content">
+            <div class="top-loading">
+                <div id="anim_6" style="">
+                    <img class="load-img" src="./img/gif.gif"/>
+                    <div id="percentShow" style="color: white;text-align: center;"></div>
+                </div>
+            </div>
+        </div>
+    </div>
+
 	<img id="bgbtn" style="position: fixed;width: 5vw;height: 5vw;top: 2vw;right: 2vw;z-index: 1000;display: none;" src="img/on.png" />
 		<div class="allPic" style="display: none;">
 			<!--空进度条-->
@@ -88,25 +99,6 @@
 		<div id="tipUpanimswo">
 			<div class="tipUpanimswos1 tipUpanimswos"><img src="img/update/girl/1.png" /></div>
 			<div class="tipUpanimswos2 tipUpanimswos"><img src="img/update/girl/2.png" /></div>
-		</div>
-		<div class="top">
-			<div class="top-content">
-				<div class="top-loading">
-					<div id="anim_6" style="width: 100vw;height: 100vh;position: absolute;z-index:1000000;background: #0577c8">
-						<img  src="./img/gif.gif" style="width:18vw;height: auto;margin-left: 43vw;margin-top: 34vh;"/>
-						<div id="percentShow" style="color: white;text-align: center;"></div>
-					</div>
-
-					<!--<div id="anim_6">
-						<img  src="./img/gif.gif" style="width:18vw;height: auto;margin-left: 43vw;margin-top: 34vh;"/>
-
-						<div class="animImgload1 animImgload"><img src="img/load/1.png"></div>
-						<div class="animImgload2 animImgload"><img src="img/load/2.png"></div>
-						<div class="animImgload3 animImgload"><img src="img/load/3.png"></div>
-					</div>-->
-
-				</div>
-			</div>
 		</div>
 
 		<div class="container">
@@ -326,9 +318,7 @@
 <script src="js/main.js"></script>
 
 <!--初始化微信调用模块-->
-<script>
-
-
+<!--<script>
 
 	(function initWxConfig() {
 		$.ajax(
@@ -359,7 +349,7 @@
 					}
 				});
 
-		preloadImg();
+		// preloadImg();
 
 	}());
 
@@ -417,7 +407,7 @@
 		});
 	});
 
-</script>
+</script>-->
 
 
 
