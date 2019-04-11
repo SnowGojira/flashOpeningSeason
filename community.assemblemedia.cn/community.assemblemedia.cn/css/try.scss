@@ -1,0 +1,32 @@
+
+/*preload page style*/
+.top-container {
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  //justify-content: center;
+  //align-items: center;
+  overflow-y: hidden;
+  z-index:1000000;
+
+  .top-content {
+    width: 100%;
+    height: 100%;
+
+    .load-img {
+      width: 18vw;
+      height: auto;
+      margin: 34vh auto 1rem 43vw;
+    }
+
+    .load-font {
+      color: white;
+      text-align: center;
+    }
+  }
+}
+
+
+
+
+/*首页加载*/

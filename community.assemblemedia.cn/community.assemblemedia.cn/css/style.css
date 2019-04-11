@@ -1,53 +1,7 @@
-@font-face {
-	font-family: hanyi;
-	/*这里是说明调用来的字体名字*/
-	src: url("../font/hanyi.ttf");
-	/*这里是字体文件路径*/
-}
-
-.none {
-	display: none;
-}
-
-/*preload page style*/
-
-.top-content {
-	width: 100%;
-	height: 100%;
-	display: flex;
-	display: -webkit-flex;
-	justify-content: center;
-	align-items: center;
+/*todo minfy the font and import it*/
+body {
 	background: #0577c8;
-	overflow-y: hidden;
 }
-
-.top-loading {
-	color: black;
-	font-size: 20px;
-}
-
-.load-img {
-	width: 18vw;
-	height: auto;
-	margin: 34vh auto 1rem 43vw;
-}
-
-/*首页加载*/
-#anim_6 {
-	width: 100vw;
-	height: 100vh;
-	top: 0;
-	left: 0;
-	position: absolute;
-	z-index:1000000;
-	}
-/*.animImgload img{height: 185px;}*/
-/*.animImgload:nth-child(1){display: block;}*/
-/*.animImgload:nth-child(2){display: none;}*/
-/*.animImgload:nth-child(3){display: none;}*/
-
-
 
 @media only screen and (device-width: 375px) and (device-height:812px) and (-webkit-device-pixel-ratio:3) {
 		html{
@@ -308,14 +262,14 @@ height: 100%;
 		/*width: 100%;
       height: 100%;*/
 	}
-	
+
 	.allPic {
 		position: absolute;
 		width: 100%;
 		height: 100%;
 		overflow: hidden;
 	}
-	
+
 	#mycanvas {
 		width: 100%;
 		/*padding: 0.5rem;*/
@@ -324,10 +278,10 @@ height: 100%;
 		top: 0;
 		/*display: none;*/
 	}
-	
+
 	.saveImg {
 text-align: center;
-     /*border: 1px solid #29A352;*/ 
+     /*border: 1px solid #29A352;*/
     /* background: #29A352; */
     color: white;
     width: 30%;
@@ -336,10 +290,10 @@ text-align: center;
     margin: 30px 10px;
     float: right;
 	}
-	
+
 	.saveImg1 {
     text-align: center;
-     /*border: 1px solid #29A352;*/ 
+     /*border: 1px solid #29A352;*/
     /* background: #29A352; */
     color: white;
     width: 36%;
@@ -348,11 +302,11 @@ text-align: center;
     margin: 30px 20px;
     float: left;
 	}
-	
+
 	.swiper-container {
 		overflow: hidden;
 	}
-	
+
 	.question-no {
 		margin-top: 9.5vw;
 		/* text-align: center; */
@@ -361,17 +315,17 @@ text-align: center;
 		color: #635050;
 		margin-left: 13vw;
 	}
-	
+
 	.question,
 	.question1 {
 		margin-top: 3rem;
 	}
-	
+
 	.question-no-type {
 		font-size: 0.8rem;
 		margin-top: 1rem;
 	}
-	
+
 	.question-no,
 	.question,
 	.question1 {
@@ -388,7 +342,7 @@ text-align: center;
 		top: 0;
 		left: 0;
 	}
-	
+
 	.question-title,
 	.question-title1 {
 		/* position: absolute; */
@@ -401,7 +355,7 @@ text-align: center;
 		border-radius: 1rem;
 		z-index: 666;
 	}
-	
+
 	.question-title p,
 	.question-title1 p {
 		padding: 1vw 10vw;
@@ -409,14 +363,14 @@ text-align: center;
 		margin-left: 3rem;
 		color: #635050;
 	}
-	
+
 	.question-no-num,
 	.question-no-type,
 	.question-title,
 	.question-title1 {
 		text-align: center;
 	}
-	
+
 .question-select {
  /* border: 1px solid #EEEEEE; */
 margin-top: 11vh;
@@ -427,7 +381,7 @@ margin-top: 11vh;
  /* margin-left: -2rem; */
  /* padding: 1rem 1rem; */
 }
-	
+
 	.question-select li {
 		list-style-type: none;
 		margin-top: 0.5rem;
@@ -438,7 +392,7 @@ margin-top: 11vh;
 		text-align:  center;
 	}
 	/*第二题*/
-	
+
 	.question-select1 {
 		border: 1px solid #EEEEEE;
 		margin-top: 5rem;
@@ -446,14 +400,14 @@ margin-top: 11vh;
 		/*margin-left: -2rem;*/
 		padding: 1rem 1rem;
 	}
-	
+
 	.question-select1 li {
 		list-style-type: none;
 		margin-top: 2rem;
 		margin-left: -1rem;
 	}
 	/*第二题*/
-	
+
 	.content {
 		margin: 0;
 		padding: 0;
@@ -461,7 +415,7 @@ margin-top: 11vh;
 		height: 100%;
 		/*overflow-x: hidden;*/
 	}
-	
+
 	.main_contents span {
 		margin: 0;
 		padding: 0;
@@ -480,7 +434,7 @@ margin-top: 11vh;
     z-index: 6;
     -webkit-animation: auto-circle4 0.5s step-end infinite;
     display: none;
-	}	
+	}
 	@-webkit-keyframes auto-circle4 {
 		0% {
 			background-image: url(../img/qizi/0.png);
@@ -534,9 +488,9 @@ margin-top: 11vh;
   .animImg:nth-child(3){display: none;}
   .animImg:nth-child(4){display: none;}
   .animImg:nth-child(5){display: none;}
-  .animImg:nth-child(6){display: none;} 
-   .animImg:nth-child(7){display: none;} 
-   
+  .animImg:nth-child(6){display: none;}
+   .animImg:nth-child(7){display: none;}
+
    /*综艺*/
 #anim_2{width:100%;height: 36%;position: absolute;z-index: 6;background-repeat: no-repeat;right: 0;}
   .animImgs img{width: 68vw;height: 100vw;float: right;margin-top: 68vw;}
@@ -545,9 +499,9 @@ margin-top: 11vh;
   .animImgs:nth-child(3){display: none;}
   .animImgs:nth-child(4){display: none;}
   .animImgs:nth-child(5){display: none;}
-  .animImgs:nth-child(6){display: none;} 
+  .animImgs:nth-child(6){display: none;}
 
-   
+
       /*嗨剧*/
 #anim_3{width: 100%;height:26%;position: absolute;z-index: 6;background-repeat: no-repeat;right: 0;}
   .animImgsa img{width: 63vw;height: 80%;float: left;margin-top: 153vw;}
@@ -556,8 +510,8 @@ margin-top: 11vh;
   .animImgsa:nth-child(3){display: none;}
   .animImgsa:nth-child(4){display: none;}
   .animImgsa:nth-child(5){display: none;}
-  .animImgsa:nth-child(6){display: none;} 
-   .animImgsa:nth-child(7){display: none;} 
+  .animImgsa:nth-child(6){display: none;}
+   .animImgsa:nth-child(7){display: none;}
 	      /*动漫*/
 #anim_4{ width:100%; height:26%; position: absolute; z-index: 6;  background-repeat: no-repeat;right: 0;}
   .animImgsaq img{width: 83.6vw;height: 70%;float: right;margin-top: 208vw;}
@@ -566,8 +520,8 @@ margin-top: 11vh;
   .animImgsaq:nth-child(3){display: none;}
   .animImgsaq:nth-child(4){display: none;}
   .animImgsaq:nth-child(5){display: none;}
-  .animImgsaq:nth-child(6){display: none;} 
-  .animImgsaq:nth-child(7){display: none;} 
+  .animImgsaq:nth-child(6){display: none;}
+  .animImgsaq:nth-child(7){display: none;}
 	/*生活*/
 	#anim_5{ width:40vw; height:26vh; position: absolute; z-index: 6;  background-repeat: no-repeat;left: 0;}
   .animImglife img{width: 86vw;height: 70%;float: left;margin-top: 328vw;}
@@ -616,9 +570,9 @@ margin-top: 11vh;
     left: 0;
     bottom: 4vh;  }
   .tipUplifes:nth-child(1){display: block;}
-  .tipUplifes:nth-child(2){display: none;} 
+  .tipUplifes:nth-child(2){display: none;}
 	/*男动效*/
-	
+
 #tipUpanimsman{
 	position: absolute;	width:100%; height:100%;  z-index: 88;  background-repeat: no-repeat;right: 0;top: 0;display: none;
 	}
@@ -629,7 +583,7 @@ margin-top: 11vh;
   .tipUpanimsmans:nth-child(1){display: block;}
   .tipUpanimsmans:nth-child(2){display: none;}
 	/*nv动效*/
-	
+
 #tipUpanimswo{
 	position: absolute;	width:100%; height:100%;  z-index: 88;  background-repeat: no-repeat;right: 0;top: 0;display: none;
 	}
@@ -641,7 +595,7 @@ margin-top: 11vh;
   .tipUpanimswos:nth-child(2){display: none;}
 
 	/*生活*/
-	
+
 	#anim30 {
 		width: 84vw;
 		height: 80vh;
@@ -705,7 +659,7 @@ margin-top: 11vh;
     z-index: 6;
     -webkit-animation: auto-circle2 0.5s step-end infinite;
     display: none;
-	}	
+	}
 	@-webkit-keyframes auto-circle2 {
 		0% {
 			background-image: url(../img/comic/0.png);
@@ -743,11 +697,11 @@ margin-top: 11vh;
 						background-size:100% 100% ;
 		}
 	}
-	
-	
-	
+
+
+
 	/*综艺*/
-	#anim1 {  
+	#anim1 {
     width: 67vw;
     height: 55vh;
     position: absolute;
@@ -757,7 +711,7 @@ margin-top: 11vh;
     z-index: 6;
     -webkit-animation: auto-circle1 0.5s step-end infinite;
     display: none;
-	}	
+	}
 	@-webkit-keyframes auto-circle1 {
 		0% {
 			background-image: url(../img/zongyi/0.png);
@@ -841,7 +795,7 @@ margin-top: 11vh;
     z-index: 6;
     -webkit-animation: auto-circle 0.5s step-end infinite;
     display: none;
-	}	
+	}
 	@-webkit-keyframes auto-circle {
 		0% {
 			background-image: url(../img/images/0.png);
@@ -880,7 +834,7 @@ margin-top: 11vh;
 		}
 	}
 	/*动画*/
-	
+
 	.beginAnswer {
 		width: 21vw;
 		height: 40px;
@@ -896,7 +850,7 @@ margin-top: 11vh;
 		background-size: 100% 100%;
 		/*background-position: center;*/
 	}
-	
+
 	.btns {
 		width: 61vw;
 		height: 9vw;
@@ -906,7 +860,7 @@ margin-top: 11vh;
 		align-items: center;
 		margin-left: 21vw;
 	}
-	
+
 	.waitse {
 		/*margin-left: 1rem;*/
 		width: 21vw;
@@ -921,7 +875,7 @@ margin-top: 11vh;
 		/*background-attachment: fixed;*/
 		background-size: 100% 100%;
 	}
-	
+
 	.tips_title p {
 		width: 50%;
 		text-align: center;
@@ -933,7 +887,7 @@ margin-top: 11vh;
 		letter-spacing: 1px;
 	}
 
-	
+
 	#startTips {
 		width: 100%;
 		height: 100%;
@@ -942,7 +896,7 @@ margin-top: 11vh;
 		justify-content: center;
 		align-items: center;
 	}
-	
+
 	.content_img {
 		width: 100%;
 		position: absolute;
@@ -963,18 +917,18 @@ margin-top: 11vh;
 		-webkit-tap-highlight-color:transparent;
 		-webkit-user-select:none;
 	}
-	
+
 	.content_one {
 		width: 64%;
 		height: 50vw;
 		top: 63vh;
 		left: 10rem;
 	}
-	
+
 	.content_one:focus{
 		outline: none;
 	}
-	
+
 	.one_path,
 	.two_path,
 	.three_path,
@@ -1004,45 +958,45 @@ margin-top: 11vh;
 		padding: 0rem 0.5rem;
 		margin-top: 2rem;
 	}
-	
+
 	.content_two {width: 64%;height: 50vw;top: 170vw;left: 1rem;}
-	
+
 	.content_three {
 		top: 235vw;
 		left: 19vw;
 		width: 64%;
 		height: 50vw;
 	}
-	
+
 	.three_path {
 		margin-left: 4rem;
 	}
-	
+
 	.four_path {
     padding: 0 0.4rem;
     margin-left: 5rem;
     margin-top: 4rem;
 	}
-	
+
 	.waiM,
 	.waiW {
 		width: 100%;
 		height: 100%;
 	}
-	
+
 	.content_four {
 		top: 350vw;
 		left: 11vw;
 		width: 64%;
 		height: 50vw;
 	}
-	
+
 	.content_five {
 		top: 250%;
 		right: 13%;
 		height: 250px;
 	}
-	
+
 	.begins {
 		border: none;
 		background: #aae529;
@@ -1052,7 +1006,7 @@ margin-top: 11vh;
 		color: white;
 		border-radius: 0.5rem;
 	}
-	
+
 	.next {
     width: 22vw;
     height: 12vw;
@@ -1072,7 +1026,7 @@ margin-top: 11vh;
     z-index: 300;
     text-align: center;
  }
-	
+
 	.one_answer,
 	.answer-main1,
 	.swiper-no-swiping,
@@ -1083,7 +1037,7 @@ margin-top: 11vh;
 		width: 100%;
 		height: 100%;
 		z-index: 100;
-		
+
 	}
 	.swiper_display_none{
 		 display:none
@@ -1119,25 +1073,19 @@ margin-top: 11vh;
 		left: 0vh;
 		top: 0vh;
  }
-	
-	.top {
-		width: 100%;
-		position: absolute;
-		height: 100%;
-		background: white;
-	}
-	
+
+
 .woringsTitle {
 	padding:0 4.1rem;
  	margin-top:44vw;
  	font-size:4.2vw;
 }
 
-	
+
 	h1 {
 		margin-top: 20%;
 	}
-	
+
 	.answer_tipss {
 		position: absolute;
 		width: 100%;
@@ -1146,7 +1094,7 @@ margin-top: 11vh;
 		background-position: center;
 		background-size: 100% 100%;
 	}
-	
+
 	.smell_tip {
 		    z-index: 90;
     position: absolute;
@@ -1186,7 +1134,7 @@ margin-top: 11vh;
 	    margin-top: 30vh;
 	    width: 100vw;
 	}
-	
+
 	h1,
 	h2 {
 		text-align: center;
@@ -1195,14 +1143,14 @@ margin-top: 11vh;
 		position: fixed;
 		text-align: center;
 	}
-	
+
 	.sex {
 		overflow: hidden;
 		background-color: #0577c8;
 		height: 100vh;
 		-webkit-tap-highlight-color:  transparent;
 	}
-	
+
 	.sex_man {
 		/* position: relative; */
 		display: flex;
@@ -1214,7 +1162,7 @@ margin-top: 11vh;
 		margin-left: 0vw;
 		margin-top: -3vh;
 	}
-	
+
 	.start_game {
 	/* left: 21vw; */
 	width: 56vw;
@@ -1263,9 +1211,9 @@ margin-top: 11vh;
 		margin-left: 68vw;
 		display: none;
 	}
-	
+
 	.dotting {
-		
+
 		display: inline-block;
 		width: 10px;
 		min-height: 2px;
@@ -1279,11 +1227,11 @@ margin-top: 11vh;
 		animation: dot 1.5s infinite step-start both;
 		/**zoom: expression(this.innerHTML='...');*/
 	}
-	
+
 	.dotting:before {
 		content: '...';
 	}
-	
+
 	.sace {
     /* margin-top: 40vh; */
     position: absolute;
@@ -1293,22 +1241,22 @@ margin-top: 11vh;
     overflow: hidden;
  }
 	/* IE8 */
-	
+
 	.dotting::before {
 		content: '';
 	}
-	
+
 	 :root .dotting {
 		margin-left: 2px;
 		padding-left: 2px;
 	}
-	
+
 	#imgShow {
 		position: absolute;
 		top:3vh;
 	}
 	/* IE9+ */
-	
+
 	@-o-keyframes dot {
 		25% {
 			border-color: transparent;
@@ -1322,7 +1270,7 @@ margin-top: 11vh;
 			border-right-color: transparent;
 		}
 	}
-	
+
 	@-ms-keyframes dot {
 		25% {
 			border-color: transparent;
@@ -1336,7 +1284,7 @@ margin-top: 11vh;
 			border-right-color: transparent;
 		}
 	}
-	
+
 	@-moz-keyframes dot {
 		25% {
 			border-color: transparent;
@@ -1350,7 +1298,7 @@ margin-top: 11vh;
 			border-right-color: transparent;
 		}
 	}
-	
+
 	@-webkit-keyframes dot {
 		25% {
 			border-color: transparent;
@@ -1526,7 +1474,7 @@ margin-top: 11vh;
 		left: 25vw;
 		color: white;
 	}
-	
+
 	.ranking_over {text-align: center;width: 81vw;margin-left: 5vw;margin-top: 3.5vw;font-size: 1.5rem;position: absolute;color: white;top: 0vh;/* z-index: 666; */text-shadow: 3px 3px 3px rgba(0,0,0, 0.4);}
 	.font-lastpage{/* bottom: 22vw; *//* left: 7vw; */font-size: 10px;margin-bottom: 2vw;/* position: absolute; */font-family: Arial;font-weight: bold;text-align:  left;margin-left: 8vw;/* margin-top: 5vw; */}
 
@@ -1537,7 +1485,7 @@ margin-top: 11vh;
 		text-align: center;
 		position:  absolute;
 	}
-	
+
 	.post_detail{
 		height: auto;
 		width: 90vw;
@@ -1555,7 +1503,7 @@ margin-top: 11vh;
 		position: absolute;
 		z-index: -4;
 	}
-	
+
 	.spinner_content {
 		width: 50px;
 		height: 50px;
@@ -1564,7 +1512,7 @@ margin-top: 11vh;
 		margin: 0 auto;
 		/*margin: 100px auto;*/
 	}
-	
+
 	.double-bounce1,
 	.double-bounce2 {
 		width: 100%;
@@ -1578,26 +1526,26 @@ margin-top: 11vh;
 		-webkit-animation: bounce 2.0s infinite ease-in-out;
 		animation: bounce 2.0s infinite ease-in-out;
 	}
-	
+
 	.double-bounce2 {
 		-webkit-animation-delay: -1.0s;
 		animation-delay: -1.0s;
 	}
-	
+
 	.over_btn {
 		width: 50vw;
 		margin: 0 auto;
 		position: absolute;
 		z-index: 555;
 	}
-	
+
 	.over_text {
 		position: absolute;
 		z-index:555;
 		width: 50vw;
 		line-height: 6vh;
 	}
-	
+
 	@-webkit-keyframes bounce {
 		0%,
 		100% {
@@ -1607,7 +1555,7 @@ margin-top: 11vh;
 			-webkit-transform: scale(1.0)
 		}
 	}
-	
+
 	@keyframes bounce {
 		0%,
 		100% {
@@ -1619,7 +1567,7 @@ margin-top: 11vh;
 			-webkit-transform: scale(1.0);
 		}
 	}
-	
+
 	.slide-container ul.answers li.selected {
 		background: #6fb2e5;
 		box-shadow: 0 1px 5px #0061aa, inset 0 10px 20px #b6f9ff;
@@ -1627,7 +1575,7 @@ margin-top: 11vh;
 		-webkit-box-shadow: 0 1px 5px #0061aa, inset 0 10px 20px #b6f9ff;
 		-moz-box-shadow: 0 1px 5px #0061aa, inset 0 10px 20px #b6f9ff;
 	}
-	
+
 	.answer-main .question .question-select li {
 		/*width: 4.9rem;
   height: .66rem;
@@ -1638,7 +1586,7 @@ margin-top: 11vh;
 		/*margin: 0 auto .2rem;*/
 		padding: 0.3rem 1rem;
 	}
-	
+
 	.answer-main .question .question-select li.right {
 		/*border-color: #29A352;*/
 		background: #29A352;
@@ -1646,7 +1594,7 @@ margin-top: 11vh;
 		color: white;
 		border-radius: 0.6rem;
 	}
-	
+
 	li.right {
 		border-color: transparent;
 		background: transparent;
@@ -1655,7 +1603,7 @@ margin-top: 11vh;
 		/*width: 49vw;*/
 		/* margin: 0 auto; */
 	}
-	
+
 	li.wrong {
 		border-color: transparent;
 		background: transparent;
@@ -1665,7 +1613,7 @@ margin-top: 11vh;
 		/*width: ;*/
 		/* margin: 0 auto; */
 	}
-	
+
 	li.right1 {
 		border-color: #29A352;
 		background: #29A352;
@@ -1673,7 +1621,7 @@ margin-top: 11vh;
 		border-radius: 0.6rem;
 		/*width: 49vw;*/
 	}
-	
+
 	li.wrong1 {
 		border-color: #D3366A;
 		background: #D3366A;
@@ -1682,7 +1630,7 @@ margin-top: 11vh;
 		border-radius: 0.6rem;
 		width: 53vw;
 	}
-	
+
 	.falseTips {
 		position:  absolute;
 		width: 54vw;
@@ -1693,7 +1641,7 @@ margin-top: 11vh;
 		margin-top: 20vh;
 		z-index: 11;
 	}
-	
+
 	.answer-main .question .question-select li.right {
 		border-color: #29A352;
 		background: #29A352;
@@ -1705,7 +1653,7 @@ margin-top: 11vh;
 		width: 50%;
 		margin: 0 auto;
 	}
-	
+
 	.answer-main .question .question-select li.wrong {
 		border-color: #D3366A;
 		background: #D3366A;
@@ -1715,7 +1663,7 @@ margin-top: 11vh;
 		width: 50%;
 		margin: 0 auto;
 	}
-	
+
 	.answer-main .question .bounceInUp1 {
 		/*-webkit-animation: bounceInUp 1s .2s ease both;
  animation: bounceInUp 1s .2s ease both;*/
@@ -1725,17 +1673,17 @@ margin-top: 11vh;
 		-webkit-animation: bounceInUp 1s .4s ease both;
 		animation: bounceInUp 1s .4s ease both;
 	}
-	
+
 	.answer-main .question .question-select li.bounceInUp3 {
 		-webkit-animation: bounceInUp 1s .6s ease both;
 		animation: bounceInUp 1s .6s ease both;
 	}
-	
+
 	.answer-main .question .question-select li.bounceInUp4 {
 		-webkit-animation: bounceInUp 1s .8s ease both;
 		animation: bounceInUp 1s .8s ease both;
 	}
-	
+
 	@-webkit-keyframes bounceInDown {
 		0% {
 			opacity: 0;
@@ -1752,7 +1700,7 @@ margin-top: 11vh;
 			-webkit-transform: translateY(0)
 		}
 	}
-	
+
 	@keyframes bounceInDown {
 		0% {
 			opacity: 0;
@@ -1769,7 +1717,7 @@ margin-top: 11vh;
 			transform: translateY(0)
 		}
 	}
-	
+
 	@-webkit-keyframes bounceInDown1 {
 		0% {
 			opacity: 0;
@@ -1780,7 +1728,7 @@ margin-top: 11vh;
 			-webkit-transform: translateY(0)
 		}
 	}
-	
+
 	@keyframes bounceInDown1 {
 		0% {
 			opacity: 0;
@@ -1791,7 +1739,7 @@ margin-top: 11vh;
 			transform: translateY(0)
 		}
 	}
-	
+
 	@keyframes fadeIn {
 		0% {
 			opacity: 0
@@ -1800,7 +1748,7 @@ margin-top: 11vh;
 			opacity: 1
 		}
 	}
-	
+
 	@keyframes scale {
 		0% {
 			transform: scale(1)
@@ -1812,7 +1760,7 @@ margin-top: 11vh;
 			transform: scale(1)
 		}
 	}
-	
+
 	@-webkit-keyframes bounceInUp {
 		0% {
 			opacity: 0;
@@ -1823,7 +1771,7 @@ margin-top: 11vh;
 			-webkit-transform: translateY(0)
 		}
 	}
-	
+
 	@keyframes bounceInUp {
 		0% {
 			opacity: 0;
@@ -1834,7 +1782,7 @@ margin-top: 11vh;
 			transform: translateY(0)
 		}
 	}*/
-	
+
 	/*.answer-main .question1 .question-select1 li {
 		width: 4.9rem;
   height: .66rem;
@@ -1845,7 +1793,7 @@ margin-top: 11vh;
 		margin: 0 auto .2rem;
 		padding: 0.3rem 1rem;
 	}*/
-	
+
 	/*.answer-main .question1 .question-select1 li.right {
 		/*border-color: #29A352;*/
 		/*background: #29A352;
@@ -1853,7 +1801,7 @@ margin-top: 11vh;
 		color: white;
 		border-radius: 0.6rem;*/
 	/*}*/
-	
+
 	/*.answer-main .question1 .question-select1 li.right {
 		border-color: #29A352;
 		background: #29A352;
@@ -1863,7 +1811,7 @@ margin-top: 11vh;
 		/*color: white;
 		border-radius: 0.6rem;*/
 	/*}*/
-	
+
 	/*.answer-main .question1 .question-select1 li.wrong {
 		border-color: #D3366A;
 		background: #D3366A;
@@ -1871,22 +1819,22 @@ margin-top: 11vh;
 		/*color: white;
 		border-radius: 0.6rem;*/
 	/*}/*/
-	
+
 	.answer-main .question1 .bounceInUp11 {
 		/*-webkit-animation: bounceInUp 1s .2s ease both;
  animation: bounceInUp 1s .2s ease both;*/
 	}
-	
+
 	/*.answer-main .question1 .question-select1 li.bounceInUp21 {
 		-webkit-animation: bounceInUp 1s .4s ease both;
 		animation: bounceInUp 1s .4s ease both;
 	}
-	
+
 	.answer-main .question1 .question-select1 li.bounceInUp31 {
 		-webkit-animation: bounceInUp 1s .6s ease both;
 		animation: bounceInUp 1s .6s ease both;
 	}
-	
+
 	.answer-main .question1 .question-select1 li.bounceInUp41 {
 		-webkit-animation: bounceInUp 1s .8s ease both;
 		animation: bounceInUp 1s .8s ease both;

@@ -12,14 +12,19 @@ var currentProblem = 0; //记录当前是第几个场景;
 var imgNum = 0;
 var images = [];
 
-/* preloadImg is an IIFE */
-(function preloadImg() {
-    imgLoader();
-    $.imgpreload(images, {
-        each: progress,
-        all: handlerComplete
-    });
-})();
+
+$(function(){
+    /* preloadImg is an IIFE */
+    (function preloadImg() {
+        imgLoader();
+        $.imgpreload(images, {
+            each: progress,
+            all: handlerComplete
+        });
+    })();
+
+
+});
 
 /********************preloadImg Reference Func ********************/
 function imgLoader() {
