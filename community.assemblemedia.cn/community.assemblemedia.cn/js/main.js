@@ -46,12 +46,10 @@ function handlerComplete() {
     /*this will be called after all images loaded*/
     $("#percentShow ").html("100<sup>%</sup>");
 
-    //$("percentShow").fadeOut(10000);
-
-    /*$(".top").hide();
-    $(".sex").show();
-    bcaudio();
-    $("#bgbtn").show();*/
+    $(".top-container").hide();
+    $(".gender-container").show();
+    // bcaudio();
+    // $("#bgbtn").show();*/
 }
 
 function bgmPlay() { //背景音乐

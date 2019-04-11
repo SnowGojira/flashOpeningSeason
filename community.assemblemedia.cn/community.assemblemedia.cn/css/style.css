@@ -2,6 +2,9 @@
 body {
 	background: #0577c8;
 }
+* {
+	-webkit-tap-highlight-color:  transparent;
+}
 
 @media only screen and (device-width: 375px) and (device-height:812px) and (-webkit-device-pixel-ratio:3) {
 		html{
@@ -1139,17 +1142,7 @@ margin-top: 11vh;
 	h2 {
 		text-align: center;
 	}
-	.sex_content{
-		position: fixed;
-		text-align: center;
-	}
 
-	.sex {
-		overflow: hidden;
-		background-color: #0577c8;
-		height: 100vh;
-		-webkit-tap-highlight-color:  transparent;
-	}
 
 	.sex_man {
 		/* position: relative; */
